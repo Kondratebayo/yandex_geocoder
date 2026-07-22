@@ -2,6 +2,6 @@
 YANDEX_API_KEY = 'YANDEX_API_KEY'
 YANDEX_BASE_URL = 'YANDEX_BASE_URL'
 
-# cleint-side handling
+# client-side handling
 DEFAULT_TIMEOUT = 60.0
 API_VERSION = 0.1

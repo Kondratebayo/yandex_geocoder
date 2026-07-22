@@ -10,11 +10,11 @@ class TokenNotFoundError(AuthenticationError):
     """API token was not provided."""
 
 
-class InvalidParamsError(Exception):
+class InvalidParamsError(YandexGeocoderException):
     """Raised when request parameters are invalid."""
 
 
-class UnexpectedResponseError(Exception):
+class UnexpectedResponseError(YandexGeocoderException):
     """Raised when request parameters are invalid."""
 
 
