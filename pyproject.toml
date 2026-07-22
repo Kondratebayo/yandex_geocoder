@@ -1,12 +1,18 @@
 [project]
 name = "yandex-geocoder"
 version = "0.1.0"
-description = "Add your description here"
+description = "Async Python client for Yandex Geocoder API"
 readme = "README.md"
-authors = [
-    { name = "Владимир Кондратьев", email = "nemezidkatm@gmail.com" }
+
+requires-python = ">=3.12"
+
+keywords = [
+    "yandex",
+    "geocoder",
+    "api-client",
+    "async",
 ]
-requires-python = ">=3.14"
+
 dependencies = [
     "httpx2>=2.5.0",
     "pydantic>=2.13.4",
@@ -41,7 +47,7 @@ select = [
 ]
 
 ignore = [
-    "E501", # длина строк
+    "E501",
 ]
 
 [tool.ruff.format]
