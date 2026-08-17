@@ -1,0 +1,72 @@
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+line-length = 88
+indent-width = 4
+
+# ruff pre v0.16.0
+# [lint]
+# select = [
+#     "E4",   # pycodestyle: import errors (e.g. multiple imports on one line)
+#     "E7",   # pycodestyle: statement errors (e.g. comparison to None/True with ==)
+#     "E9",   # pycodestyle: runtime errors (syntax errors, undefined names at parse time)
+#     "F",    # pyflakes: general errors (unused imports/vars, undefined names, etc.)
+#     "I",    # isort: import sorting/order
+#     "UP",   # pyupgrade: modernize syntax for target Python version
+#     "B",    # flake8-bugbear: likely bugs and design problems
+#     "SIM",  # flake8-simplify: suggests simpler/clearer code patterns
+# ]
+
+# ruff v0.16.0 updated
+[lint]
+extend-select = [
+    "SIM",  # flake8-simplify: suggests simpler/clearer code patterns
+    "C90",  # complexity
+    "E401", # Multiple imports on one line
+    "E711", # Comparison to None should be is None
+    "E712", # Comparison to True/False
+    "E713", # `not in` rule
+    "E714", # `not is` rule
+    "F403", # Wildcard import `*`
+    "F405", # Name may be undefined from wildcard import
+    "F406", # Module import not allowed inside function
+    "F722", # Syntax error in forward annotation
+]
+
+ignore = []
+fixable = ["ALL"]
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
