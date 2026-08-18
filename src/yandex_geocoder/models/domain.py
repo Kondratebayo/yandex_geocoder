@@ -29,5 +29,5 @@ class GeocodeResult(BaseModel):
 
         Returns:
             Geocoded | None
-        """        """"""
+        """
         return self.locations[0] if self.locations else None
