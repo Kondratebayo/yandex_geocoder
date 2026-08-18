@@ -51,7 +51,7 @@ class AsyncYandexGeocoderClient:
         http_client: httpx2.AsyncClient | None = None,
         default_params: BaseGeocoderParams | None = None,
         headers: Mapping[str, Any] | None = None,
-        timeout: int | httpx2.Timeout | None = None,
+        timeout: int | float | httpx2.Timeout | None = None,
     ) -> None:
         self._check_type(token, (str, SecretStr), "token")
         self._check_type(url, (str, httpx2.URL), "url")
